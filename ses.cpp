@@ -2,14 +2,15 @@
 #include "ses.h"
 
 //Constructor
-PWFetcher::PWFetcher(void){
+PWFetcher::PWFetcher(fetch_t type){
 
     //construct the base
-    //Are we using the command line?
-    #ifdef __SESTREAM_PWSTREAMCLI_H__
-    stream=new PWStreamCLI();
-    //Elseif to follow
-    #endif // __SESTREAM_PWSTREAMCLI_H__
+    //Are we using the command line or wx?
+    if(type==TYPE_WX){
+		stream=new PWStreamWX();
+    }else{
+		stream=new PWStreamCLI();
+    }
 
 }
 

@@ -6,12 +6,13 @@
 #include <string>
 
 #include "pwstreambase.h"
-
-//Which stream do we include?
-#ifndef _WX_WX_H_
 #include "pwstreamcli.h"
-//There will be an else here in the future
-#endif // _WX_WX_H_
+#include "pwstreamwx.h"
+
+typedef enum fetch_t {
+	TYPE_WX,
+	TYPE_CLI
+} fetch_t;
 
 //Meta data type that connects to wx and CLI backends for password fetching
 class PWFetcher {
@@ -21,7 +22,7 @@ private:
 public:
 
 	//Constructors
-	PWFetcher(void);
+	PWFetcher(fetch_t);
 	~PWFetcher(void);
 
 	//Fetch
