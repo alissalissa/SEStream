@@ -2,7 +2,7 @@
 
 //Destructor
 PWStreamCLI::~PWStreamCLI(){
-	delete pwstr;
+	//Do nothing
 }
 
 /****************END DESTRUCTOR***************/

@@ -4,11 +4,11 @@ using namespace std;
 
 //Constructor / Destructor
 PWStreamWX::PWStreamWX():PWStreamBase(){
-    //do nothing
+    //Do nothing
 }
 
 PWStreamWX::~PWStreamWX(){
-    delete pwstr;
+    //Do nothing
 }
 
 //Fetch method
